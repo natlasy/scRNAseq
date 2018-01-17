@@ -14,7 +14,7 @@ T=colSums(umg)
 ER=colSums(umg[grep("^ERCC",row.names(umg)),])
 MT=colSums(umg[grep(":MT-",row.names(umg)),])
 U=T-(ER+MT)
-id <- read.table("./index.plate")
+id <- read.table("./index.plate.txt")
 
 comx <- NULL
 for (i in 1:ncol(umg)) {comx <- c(comx,nrow(umg[umg[,i]>=1,]))}
